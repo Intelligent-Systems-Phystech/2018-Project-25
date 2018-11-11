@@ -1,7 +1,10 @@
 class Parser:
+    def __init__(self, dlst):
+        self.dirlist = dlst
+
     def parse(self, rootName): # return dict: image name and list of tuples with corner points of mensch
         import re
-        dirlist = ['Test', 'Train']
+        dirlist = self.dirlist
         ret = {}
         rootName +='/'
         for dirname in dirlist:
@@ -21,8 +24,8 @@ class Parser:
                         # print ln
                         while '' in ln:
                             ln.remove('')
-                        xy_min = (ln[0], ln[1])
-                        xy_max = (ln[2], ln[3])
+                        xy_min = (int(ln[0]), int(ln[1]))
+                        xy_max = (int(ln[2]), int(ln[3]))
                         objcords = (xy_min, xy_max)
                         xylist.append(objcords)
                 ret[line[:-1]] = xylist
