@@ -1,5 +1,6 @@
 from imparse import Parser
 import cv2 as cv
+import re
 import numpy as np
 # todo: add LBP-descriptor
 def hog_hist(img):
@@ -22,7 +23,7 @@ def hog_hist(img):
    hist = hog.compute(img, padding)
    return hist
 
-def makehist_positive(stat):
+def makehist_positive(stat): #stat = test or train
     par = Parser(stat)
     pdims = par.parse('INRIAPerson')
     ret = []
@@ -40,5 +41,29 @@ def makehist_positive(stat):
             #cv.destroyAllWindows()
     return ret
 
-hst = makehist_positive(['Test'] )
-print len(hst)
+def makelist_positive_norm(path):
+    poslist = open(path + '/' + 'pos.lst', 'r')
+    ret = []
+    for imname in poslist:
+        imname = re.split(r'/', imname[:-1])[2]
+        imname = path + '/pos/' + imname
+        image = cv.imread(imname, 1)
+        image = cv.resize(image, (64,128), interpolation=cv.INTER_LINEAR)
+        hist = hog_hist(image)
+        ret.append(hist)
+    return ret
+
+
+
+def makelist_negative(stat):
+    neglstfname = 'INRIAPerson/Test/neg.lst'
+    neglist = open(neglstfname, 'r')
+    for negname in neglist:
+        negname = 'INRIAPerson/' + negname[:-1]
+        image = cv.imread('INRIAPerson/train_64x128_H96/pos/crop_000010a.png', 0)
+        #print negname
+        cv.imshow('wnd', image)
+        cv.waitKey()
+        cv.destroyAllWindows()
+
+
