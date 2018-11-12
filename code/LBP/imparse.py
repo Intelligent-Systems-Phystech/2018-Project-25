@@ -2,7 +2,7 @@ class Parser:
     def __init__(self, dlst):
         self.dirlist = dlst
 
-    def parse(self, rootName): # return dict: image name and list of tuples with corner points of mensch
+    def parse(self, rootName): 
         import re
         dirlist = self.dirlist
         ret = {}
@@ -18,7 +18,7 @@ class Parser:
                 annot = open(filename, 'r')
                 xylist = []
                 for ln in annot:
-                    if ln.startswith('Bounding'):  # for every pedestrain
+                    if ln.startswith('Bounding'):  
                         ln = re.split(r':', ln)
                         ln = re.split(r'[^1234567890]', ln[1])
                         # print ln
