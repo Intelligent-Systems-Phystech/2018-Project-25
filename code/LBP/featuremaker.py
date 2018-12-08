@@ -17,10 +17,10 @@ def hog_hist(img):
    nlevels = 64
    hog = cv.HOGDescriptor(winSize,blockSize,blockStride,cellSize,nbins,derivAperture,winSigma,
                            histogramNormType,L2HysThreshold,gammaCorrection,nlevels)
-   winStride = (1,1)
-   padding = (8,8)
+   winStride = (16,16)
+   padding = (0,0)
    locations = ((10,20),)
-   hist = hog.compute(img, padding)
+   hist = hog.compute(img, winStride, padding)
    return hist
 
 def makehist_positive(stat): #stat = test or train
@@ -39,9 +39,11 @@ def makehist_positive(stat): #stat = test or train
             #cv.imshow('wnd', pimg)
             #cv.waitKey()
             #cv.destroyAllWindows()
+    for h in ret:
+        h.reshape(3780)
     return ret
 
-def makelist_positive_norm(path):
+def makehist_positive_norm(path):
     poslist = open(path + '/' + 'pos.lst', 'r')
     ret = []
     for imname in poslist:
@@ -51,19 +53,28 @@ def makelist_positive_norm(path):
         image = cv.resize(image, (64,128), interpolation=cv.INTER_LINEAR)
         hist = hog_hist(image)
         ret.append(hist)
+    for h in ret:
+        h.reshape(3780)
     return ret
 
-
-
-def makelist_negative(stat):
-    neglstfname = 'INRIAPerson/Test/neg.lst'
+def makehist_negative(stat):
+    neglstfname = 'INRIAPerson/'+ stat +'/neg.lst'
     neglist = open(neglstfname, 'r')
+    ret = []
     for negname in neglist:
         negname = 'INRIAPerson/' + negname[:-1]
         image = cv.imread('INRIAPerson/train_64x128_H96/pos/crop_000010a.png', 0)
-        #print negname
-        cv.imshow('wnd', image)
-        cv.waitKey()
-        cv.destroyAllWindows()
+        hist = hog_hist(image)
+        len = np.shape(hist)[0]
+        left = 0
+        right = 3780
+        while (right<len):
+            ret.append(hist[left:right])
+            left += 3780
+            right += 3780
+    for h in ret:
+        h.reshape(3780)
+    return ret
+
 
 
