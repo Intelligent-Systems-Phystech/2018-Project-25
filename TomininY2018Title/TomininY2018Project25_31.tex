@@ -39,7 +39,7 @@
     {$^1$Moscow Institute of Physics and Technology, 9 Institutskiy per., Dolgoprudny, Moscow, Russia\par
 	$^2$Federal Research Center ``Computer Science and Control'' of RAS, 44/2 Vavilova Str., Moscow, Russia}
 \abstractEng
-    {The approach of generalizing of HOG algorithm (Histograms of Oriented Gradients) for pedestrian detection on an image by replacing the linear binary classifier SVM with a convolutional neural network of shallow depth is considered. In order to use the imput convolutional layers of the neural network in the space of integral features, in this paper it is proposed to convert the integral vector of the HOG escriptor into a three-dimensional tensor having two spatial and one spectral dimensions according its internal block structures. The local structure of the HOG descriptor allows to select additional local features by the first convolutional layers of the neural network to optimize the space of HOG features for the classifying layer. In the paper simple convolutional neural network architectures are studied, computational experiments are conducted and the results of the comparison of the basic HOG-SVM algorithm and the proposed generalizations of HOG-DNN and HOG-CNN on the INRIA and Cityscapes pedestrian databases are presented.
+    {HOG <...>.
 
     \bigskip
     \textbf{Keywords}: \emph{HOG, CNN, Histograms of Oriented Gradients, convolutional network, pedestrian detection}.}
@@ -143,7 +143,7 @@ HOG, изображение $f(x,y)$, где $x$, $y$~--– координаты
 
 \begin{figure}
 	\includegraphics[width=0.9\linewidth]{3}
-	\caption{После итеррации с каждым вектором размерности $4 \ell$ }
+	\caption{После итеррации с каждым вектором размерности$4 \ell$ }
 	%\label{fg:Example}
 \end{figure}
 
@@ -162,34 +162,6 @@ HOG, изображение $f(x,y)$, где $x$, $y$~--– координаты
 Также база содержит 1218 изображений фона, из которых в отрицательную чать обучающей выборки выделяется 12180 окон размером 64 пикселей, центр окна определяется случайно.
 Для обучения классификатора была использована библиотека OpenCV, гласификатор обучался с помощью линейного метода SVM.
 
-
-\begin{center}
-\begin{picture}(120,120)
-\put(-75,80){\framebox(300,15){Признаковое описание изображения}}
-\put(75,80){\vector(0,-1){12.5}}
-\put(-75,52.5){\framebox(300,15){Обучение модели}}
-\put(75,52.5){\vector(0,-1){12.5}}
-\put(-75,25){\framebox(300,15){Вычисление результатов модели на тестовой выборке}}
-\end{picture}
-\end{center}
-
-
-\begin{figure}[h]
-	\includegraphics[width=\linewidth]{detcurve}
-	\caption{DET - кривая для HOG+SVM }
-	%\label{fg:Example}
-\end{figure}
-
-
-\begin{center}
-\begin{tabular}{| l | l | l |}
-\hline
-{Метод} & {Miss Rate, INRIA} & {Miss Rate, CityScapes} \\ \hline
-{SVM} & {$0.027$} & {$-$} \\ \hline
-{CNN} & {$-$} & {$-$} \\ \hline
-\end{tabular}
-\newline
-\end{center}
 
 \section{Заключение}
 В работе представлен подход обобщения алгоритма HOG для детектирования пешеходов 
