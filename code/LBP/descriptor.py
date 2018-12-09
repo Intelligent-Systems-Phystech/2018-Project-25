@@ -69,7 +69,9 @@ class DESCRIPTOR:
         ret *= 9
         return ret
 
-    def cell_lbp_hist(self, img):
+    def cell_lbp_hist(self, img, trans = True):
+        if trans == True:
+            img = img.transpose()
         winSize = self.winSize
         blockSize = self.blockSize
         blockStride = self.blockStride
@@ -134,5 +136,5 @@ class DESCRIPTOR:
     def descript(self, img):
         import numpy as np
         hog_hist = self.hog_hist(img)
-        lbp_hist = self.cell_lbp_hist(img.transpose())
+        lbp_hist = self.cell_lbp_hist(img)
         return np.concatenate((hog_hist, lbp_hist))

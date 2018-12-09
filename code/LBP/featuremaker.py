@@ -28,7 +28,7 @@ def makehist_positive(stat): #stat = test or train
         h.reshape(3780)
     return ret
 
-def makehist_positive_norm(path):
+def makehist_positive_norm(path, dsc = 'HOG+LBP'):
     poslist = open(path + '/' + 'pos.lst', 'r')
     ret = []
     for imname in poslist:
@@ -36,21 +36,36 @@ def makehist_positive_norm(path):
         imname = path + '/pos/' + imname
         image = cv.imread(imname, 0)
         image = cv.resize(image, (64, 128), interpolation=cv.INTER_LINEAR)
-        hist = des.descript(image)
+        hist = []
+        if dsc == 'HOG+LBP':
+            hist = des.descript(image)
+        if dsc == 'HOG':
+            hist = des.hog_hist(image)
+        if dsc == 'LBP':
+            hist = des.cell_lbp_hist(image)
         ret.append(hist)
 
     return ret
 
-def makehist_negative(stat):
+def makehist_negative(stat, dsc = 'HOG+LBP'):
     neglstfname = 'INRIAPerson/'+ stat +'/neg.lst'
     neglist = open(neglstfname, 'r')
     ret = []
     for negname in neglist:
         negname = 'INRIAPerson/' + negname[:-1]
         image = cv.imread('INRIAPerson/train_64x128_H96/pos/crop_000010a.png', 0)
-        hist = des.descript(image)
+        nfeatures = 0
+        hist = np.zeros(1)
+        if dsc == 'HOG+LBP':
+            hist = des.descript(image)
+            nfeatures = des.n_lbp_features() + des.n_hog_features()
+        if dsc == 'HOG':
+            hist = des.hog_hist(image)
+            nfeatures = des.n_hog_features()
+        if dsc == 'LBP':
+            hist = des.hog_hist(image)
+            nfeatures = des.n_lbp_features()
         len = np.shape(hist)[0]
-        nfeatures = des.n_lbp_features()+des.n_hog_features()
         left = 0
         right = nfeatures
         while (right<len):
@@ -58,6 +73,7 @@ def makehist_negative(stat):
             ret.append(hst)
             left += nfeatures
             right += nfeatures
+            #print hst.shape
     return ret
 
 
