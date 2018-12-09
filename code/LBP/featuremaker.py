@@ -2,26 +2,11 @@ from imparse import Parser
 import cv2 as cv
 import re
 import numpy as np
-# todo: add LBP-descriptor
-def hog_hist(img):
-   winSize = (64,128)
-   blockSize = (16,16)
-   blockStride = (8,8)
-   cellSize = (8,8)
-   nbins = 9
-   derivAperture = 1
-   winSigma = 4.
-   histogramNormType = 0
-   L2HysThreshold = 2.0000000000000001e-01
-   gammaCorrection = 0
-   nlevels = 64
-   hog = cv.HOGDescriptor(winSize,blockSize,blockStride,cellSize,nbins,derivAperture,winSigma,
-                           histogramNormType,L2HysThreshold,gammaCorrection,nlevels)
-   winStride = (16,16)
-   padding = (0,0)
-   locations = ((10,20),)
-   hist = hog.compute(img, winStride, padding)
-   return hist
+from descriptor import *
+
+des = DESCRIPTOR()
+cell_lbp_hist = des.cell_lbp_hist
+hog_hist = des.hog_hist
 
 def makehist_positive(stat): #stat = test or train
     par = Parser(stat)
@@ -49,12 +34,11 @@ def makehist_positive_norm(path):
     for imname in poslist:
         imname = re.split(r'/', imname[:-1])[2]
         imname = path + '/pos/' + imname
-        image = cv.imread(imname, 1)
-        image = cv.resize(image, (64,128), interpolation=cv.INTER_LINEAR)
-        hist = hog_hist(image)
+        image = cv.imread(imname, 0)
+        image = cv.resize(image, (64, 128), interpolation=cv.INTER_LINEAR)
+        hist = des.descript(image)
         ret.append(hist)
-    for h in ret:
-        h.reshape(3780)
+
     return ret
 
 def makehist_negative(stat):
@@ -64,16 +48,16 @@ def makehist_negative(stat):
     for negname in neglist:
         negname = 'INRIAPerson/' + negname[:-1]
         image = cv.imread('INRIAPerson/train_64x128_H96/pos/crop_000010a.png', 0)
-        hist = hog_hist(image)
+        hist = des.descript(image)
         len = np.shape(hist)[0]
+        nfeatures = des.n_lbp_features()+des.n_hog_features()
         left = 0
-        right = 3780
+        right = nfeatures
         while (right<len):
-            ret.append(hist[left:right])
-            left += 3780
-            right += 3780
-    for h in ret:
-        h.reshape(3780)
+            hst = hist[left:right]
+            ret.append(hst)
+            left += nfeatures
+            right += nfeatures
     return ret
 
 
