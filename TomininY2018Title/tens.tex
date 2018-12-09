@@ -1,0 +1,58 @@
+\documentclass[parskip]{scrartcl}
+\usepackage[margin=15mm]{geometry}
+\usepackage{tikz}
+
+\newcommand{\tikzcuboid}[4]{% width, height, depth, scale
+\begin{tikzpicture}[scale=#4]
+\foreach \x in {0,...,#1}
+{   \draw (\x ,0  ,#3 ) -- (\x ,#2 ,#3 );
+    \draw (\x ,#2 ,#3 ) -- (\x ,#2 ,0  );
+}
+\foreach \x in {0,...,#2}
+{   \draw (#1 ,\x ,#3 ) -- (#1 ,\x ,0  );
+    \draw (0  ,\x ,#3 ) -- (#1 ,\x ,#3 );
+}
+\foreach \x in {0,...,#3}
+{   \draw (#1 ,0  ,\x ) -- (#1 ,#2 ,\x );
+    \draw (0  ,#2 ,\x ) -- (#1 ,#2 ,\x );
+}
+
+\end{tikzpicture}
+}
+
+\newcommand{\tikzcube}[2]{% length, scale
+\tikzcuboid{#1}{#1}{#1}{#2}
+}
+
+\begin{document}
+Полученный интегральный дескриптор $\textbf{g}$ является объединением всех блочных дейскрипторов. Признаковое пространство G имеет размерность ${2(I-1)}{2(J-1}){l}$. Для востановления пространственной смежности ячеек нужно перейти в новое трехмерное тензорное пространство с размерностью  ${2(I-1)}\times{2(J-1})\times{l}$. \\
+Изначально вектор g имеет вид:\\
+
+$\underbrace{\tikzcuboid{12}{1}{1}{0.5}}_{4\ell (1)}$ 
+$\underbrace{\tikzcuboid{12}{1}{1}{0.5}}_{4\ell (2)}$ $\cdots$ 
+$\underbrace{\tikzcuboid{12}{1}{1}{0.5}}_{4\ell (\textbf{I}\times \textbf{J})}$
+
+Далее проводится операция с каждым вектором размерности $4 \ell$\\
+
+$\underbrace{\tikzcuboid{12}{1}{1}{0.5}}_{4\ell (i)}$ $\Rightarrow$ $\tikzcuboid{2}{2}{4}{0.5}$
+
+После итеррации
+
+$\underbrace{\tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5}}_{\textbf{I}(1)}$ 
+$\underbrace{\tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5}}_{\textbf{I}(2)}$  $\cdots$ 
+$\underbrace{\tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5}}_{\textbf{I}(\textbf{J})}$ 
+
+Меняется расположение блоков
+
+$\underbrace{\tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5}}_{\textbf{I}(1)}$ \\
+$\underbrace{\tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5}}_{\textbf{I}(2)}$ \\
+  $\cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots \cdots  $ \\
+$\underbrace{\tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5} \cdot \cdot \cdot \tikzcuboid{2}{2}{4}{0.5}}_{\textbf{I}(\textbf{J})}$ \\
+
+При объединении всех блоков получается
+
+$\underbrace{\tikzcuboid{20}{14}{4}{0.5}}_{\textbf{I}}$ 
+
+
+
+\end{document}
