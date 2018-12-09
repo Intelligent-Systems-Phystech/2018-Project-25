@@ -28,7 +28,7 @@ class DESCRIPTOR:
 
     def __init__(self, winSize = (64,128), blockSize = (16,16),
                  blockStride = (8,8), cellSize = (8,8),
-                 winStride = (16,16), radius = 1, npoints = 7):
+                 winStride = (16,16), radius = 2, npoints = 8):
         self.winSize = winSize
         self.blockSize = blockSize
         self.blockStride = blockStride
