@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.6)  10 DEC 2018 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.6)  10 DEC 2018 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1495,36 +1495,36 @@ Normal \count register pool exhausted, switching to extended pool.
 (./TomininY2018Project25_31.aux)
 \openout1 = `TomininY2018Project25_31.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 53.
+LaTeX Font Info:    Try loading font information for U+msa on input line 46.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 53.
+LaTeX Font Info:    Try loading font information for U+msb on input line 46.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 53.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 46.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package xypdf Info: Line width: 0.47998pt on input line 53.
+Package xypdf Info: Line width: 0.47998pt on input line 46.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1544,17 +1544,17 @@ Package xypdf Info: Line width: 0.47998pt on input line 53.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into 
 your preamble.
- on input line 53.
+ on input line 46.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for T2A+cmss on input line 54.
+LaTeX Font Info:    Try loading font information for T2A+cmss on input line 47.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/cyrillic/t2acmss.fd
 File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 54.
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 47.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
@@ -1577,7 +1577,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 <fig1.jpg, id=27, 567.62062pt x 374.14781pt>
 File: fig1.jpg Graphic file (type jpg)
  <use fig1.jpg>
-Package pdftex.def Info: fig1.jpg used on input line 65.
+Package pdftex.def Info: fig1.jpg used on input line 58.
 (pdftex.def)             Requested size: 483.69684pt x 318.84352pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1593,97 +1593,120 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) has occurred while \output is active
 
  []
 
-<1.jpg, id=38, 1134.2375pt x 83.31125pt>
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+<1.jpg, id=44, 1134.2375pt x 83.31125pt>
 File: 1.jpg Graphic file (type jpg)
  <use 1.jpg>
-Package pdftex.def Info: 1.jpg used on input line 141.
+Package pdftex.def Info: 1.jpg used on input line 138.
 (pdftex.def)             Requested size: 483.69684pt x 35.5282pt.
+
+<2.jpg, id=46, 524.96124pt x 163.61125pt>
+File: 2.jpg Graphic file (type jpg)
+ <use 2.jpg>
+Package pdftex.def Info: 2.jpg used on input line 150.
+(pdftex.def)             Requested size: 290.22105pt x 90.4533pt.
+
+<3.jpg, id=47, 702.625pt x 269.005pt>
+File: 3.jpg Graphic file (type jpg)
+ <use 3.jpg>
+Package pdftex.def Info: 3.jpg used on input line 158.
+(pdftex.def)             Requested size: 338.5863pt x 129.634pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 
  []
 
-[4] <2.jpg, id=47, 524.96124pt x 163.61125pt>
-File: 2.jpg Graphic file (type jpg)
- <use 2.jpg>
-Package pdftex.def Info: 2.jpg used on input line 153.
-(pdftex.def)             Requested size: 290.22105pt x 90.4533pt.
-
-<3.jpg, id=48, 702.625pt x 269.005pt>
-File: 3.jpg Graphic file (type jpg)
- <use 3.jpg>
-Package pdftex.def Info: 3.jpg used on input line 161.
-(pdftex.def)             Requested size: 338.5863pt x 129.634pt.
-
-<4.jpg, id=49, 437.635pt x 534.99875pt>
+[5 <./1.jpg> <./2.jpg>] <4.jpg, id=56, 437.635pt x 534.99875pt>
 File: 4.jpg Graphic file (type jpg)
  <use 4.jpg>
-Package pdftex.def Info: 4.jpg used on input line 172.
+Package pdftex.def Info: 4.jpg used on input line 169.
 (pdftex.def)             Requested size: 290.22105pt x 354.79008pt.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 
  []
 
-[5 <./1.jpg> <./2.jpg> <./3.jpg>]
+[6 <./3.jpg> <./4.jpg>] <detcurve.jpg, id=62, 543.02875pt x 370.38374pt>
+File: detcurve.jpg Graphic file (type jpg)
+
+<use detcurve.jpg>
+Package pdftex.def Info: detcurve.jpg used on input line 197.
+(pdftex.def)             Requested size: 386.95894pt x 263.94637pt.
+
 Underfull \hbox (badness 10000) has occurred while \output is active
 
  []
 
-[6 <./4.jpg>]<<ot1tt.cmap>>
+[7 <./detcurve.jpg>]<<ot1tt.cmap>>
 No file TomininY2018Project25_31.bbl.
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 
  []
 
-[7] (./TomininY2018Project25_31.aux) ) 
+[8]
+Underfull \hbox (badness 10000) has occurred while \output is active
+
+ []
+
+[9] (./TomininY2018Project25_31.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 29349 strings out of 492995
- 668072 string characters out of 6132705
+ 29354 strings out of 492995
+ 668151 string characters out of 6132705
  894150 words of memory out of 5000000
- 32190 multiletter control sequences out of 15000+600000
+ 32194 multiletter control sequences out of 15000+600000
  38972 words of font info for 110 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 69i,14n,98p,3443b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts
-/enc/dvips/cm-super/cm-super-t2a.enc}</usr/local/texlive/2017/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr6.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmssbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy7.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmti10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmtt12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/
-sfbi1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sf
-bx1095.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx
-1200.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm10
-00.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1095
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.p
-fb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb
-></usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on TomininY2018Project25_31.pdf (7 pages, 553411 bytes).
+ 69i,15n,98p,3443b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
+}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/cm-super/sfsx1728.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2017/texmf-dist/fonts
+/type1/public/cm-super/sftt1200.pfb>
+Output written on TomininY2018Project25_31.pdf (9 pages, 677023 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 185 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 62 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 67 words of extra memory for PDF output out of 10000 (max. 10000000)
 
