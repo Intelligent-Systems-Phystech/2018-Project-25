@@ -1,0 +1,15 @@
+def Reshape_in(Q):
+    RES=[]
+    for i in range(0,9):
+        a=[] #30 array of 14 elem
+        for j in range(0,15):
+            b=[] #14 elem
+            c=[]#14 elem
+            for k in range(0,7):
+                b.append(Q[2*j*14*9+k*36+i])
+                b.append(Q[2*j*14*9+k*36+i+18])
+                c.append(Q[2*j*14*9+k*36+i+9])
+                c.append(Q[2*j*14*9+k*36+i+27])
+            a.append(b)
+            a.append(c)
+        RES.append(a)
